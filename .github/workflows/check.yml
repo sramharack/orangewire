@@ -33,7 +33,7 @@ jobs:
           echo "$PWD/typst-x86_64-unknown-linux-musl" >> "$GITHUB_PATH"
 
       - name: Build PDF
-        run: ./scripts/build.sh
+        run: bash scripts/build.sh
 
       - uses: actions/upload-artifact@v4
         with:

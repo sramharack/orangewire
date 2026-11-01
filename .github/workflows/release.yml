@@ -27,6 +27,6 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          ./scripts/build.sh
+          bash scripts/build.sh
           cp build/orangewire.pdf "build/orangewire-${{ github.event.release.tag_name }}.pdf"
           gh release upload "${{ github.event.release.tag_name }}" "build/orangewire-${{ github.event.release.tag_name }}.pdf" --clobber
