@@ -1,0 +1,4 @@
+case,system,v_ll,poles,s_va,true_a,shortcut_a,ratio
+three_pole_240_delta,120/240 V delta,240.0,3,1000.0,2.4056,2.7778,1.1547
+two_pole_208_wye,120/208Y,208.0,2,1000.0,4.8077,4.1667,0.8667
+two_pole_240_delta,120/240 V delta,240.0,2,1000.0,4.1667,4.1667,1.0000

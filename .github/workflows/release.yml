@@ -1,0 +1,32 @@
+# When a release is published on GitHub, build the PDF and attach it.
+name: Release PDF
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+env:
+  TYPST_VERSION: "0.15.0"
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Typst
+        run: |
+          curl -sSL -o typst.tar.xz "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz"
+          tar xf typst.tar.xz
+          echo "$PWD/typst-x86_64-unknown-linux-musl" >> "$GITHUB_PATH"
+
+      - name: Build and attach
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ./scripts/build.sh
+          cp build/orangewire.pdf "build/orangewire-${{ github.event.release.tag_name }}.pdf"
+          gh release upload "${{ github.event.release.tag_name }}" "build/orangewire-${{ github.event.release.tag_name }}.pdf" --clobber

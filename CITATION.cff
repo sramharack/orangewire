@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Beyond the Orange Wire: Designing, Loading and Troubleshooting High-Leg and Open-Delta Services"
+type: software
+authors:
+  - family-names: "Ramharack"
+    given-names: "Shankar"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+version: "0.1.0-dev"
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/YOUR-USERNAME/orangewire"
+abstract: >-
+  An open application note on 120/240 V four-wire delta services (closed
+  high-leg delta and open delta): theory, NEC 2023 requirements, the 208 V
+  question, common field problems, and worked commercial and industrial
+  examples, with a macro-free workbook, an interactive explorer and OpenDSS
+  validation models.
+keywords:
+  - high-leg delta
+  - open delta
+  - four-wire delta
+  - 120/240 V
+  - NEC 2023
+  - panel schedule
+  - building services

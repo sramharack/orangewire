@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[oc]
+.venv/
+*.egg-info/
+dist/
+
+# Built PDF (attached to releases instead)
+build/
+
+# Office lock and temp files
+~$*
+.~lock.*#
+
+# OS
+.DS_Store
+Thumbs.db

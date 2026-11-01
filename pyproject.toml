@@ -1,0 +1,19 @@
+[project]
+name = "orangewire"
+version = "0.1.0"
+description = "Helpers and checks for the Beyond the Orange Wire application note"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.7,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
